@@ -1,0 +1,953 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5EDED;
+}
+
+#navbar {
+    background-color: #6482AD;
+    padding: 20px;
+}
+
+h1 {
+    color: #F5EDED;
+    font-family: "Arsenal SC", sans-serif;
+    letter-spacing: 3px;
+}
+
+
+#mobile-flex a {
+    text-decoration: none;
+    color: #F5EDED;
+}
+
+#myDropdown a {
+    color: black;
+}
+
+navbar div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item {
+    padding: 10px;
+    margin: 10px;
+    background-color: #F5EDED;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: #E2DAD6;
+    cursor: pointer;
+}
+
+svg {
+    padding: 10px;
+}
+
+.dropdown {
+    display: none;
+}
+
+#my-dropdown a {
+    color: black;
+}
+
+#latest-release {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0px 20px 0px 20px;
+    
+}
+
+.release-left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.release-left p {
+    font-style: italic;
+}
+
+.release-left a {
+   color:#6482AD;
+}
+
+.release-left a:visited {
+    color:#1F316F;
+}
+
+.social-list {
+    list-style: none;
+}
+
+.release-left h2 {
+    font-size: 2rem;
+    font-family: "Arsenal SC", sans-serif;
+    letter-spacing: 3px;
+}
+
+.release-left p {
+    font-size: 1.25rem;
+    display: inline-block;
+    width: 300px;
+}
+
+.release-left li {
+    font-size: 1.25rem;
+}
+
+.youtube {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+#instagram {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0px 20px 0px 20px;
+}
+
+.instagram-media {
+    width: 1000px;
+}
+
+.horizontal-rule {
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-rule hr {
+    width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+}
+
+footer p {
+    color: #1F316F;
+}
+
+.photo-gallery {
+    margin-top: 50px;
+}
+
+.video-container {
+  width: 40vw;
+  position: relative;
+}
+
+.slideshow-container {
+    width: 70vw;
+    height: 500px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .image {
+    text-align: center;
+  }
+
+  .image img {
+    width: 60vw;
+    height: 500px;
+    object-fit: contain;
+   
+  }
+
+  .mySlides {
+    display: none;
+   
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #1F316F;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev-vid, .next-vid {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next-vid {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev-vid:hover, .next-vid:hover {
+    background-color: #1F316F;
+    opacity: 0.8;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+ 
+  .prev:hover, .next:hover {
+    background-color: #E2DAD6;
+  }
+  
+  .numbertext {
+    color: #1F316F;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+  .biography {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .biography div {
+    box-shadow: 11px 9px 17px 0px rgba(82,82,82,1);
+    background-color: #E2DAD6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    margin-right: 20px;
+    font-size: 14pt;
+  }
+
+  .biography img {
+   width: 400px;
+  }
+
+  .in-view {
+    animation: slideIn;
+    animation-duration: 4s;
+  }
+
+  @keyframes slideIn {
+    from {margin-left: 100px;}
+    to {margin-left: 0px;}
+  }
+
+  #music-players iframe {
+    width: 45%;
+    height: 500px;
+    border-style: none;
+   
+  }
+
+  #players {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #music-players {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #music-title {
+    width: 94%;
+    align-self: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-family: "Arsenal SC", sans-serif;
+  }
+
+
+
+  #article-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    justify-content: center;
+    gap: 40px;
+    margin: 0px 20px 100px 20px;
+    
+  }
+
+  #article-gallery a {
+    color: #1F316F;
+  }
+
+  #article-gallery h3 {
+    margin-bottom: 10px;
+  }
+
+  #articles h2 {
+    font-family: "Arsenal SC", sans-serif;
+    letter-spacing: 3px;
+    margin: 0px 0px 20px 20px;
+    font-size: 3rem;
+  }
+
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .image:hover {
+    cursor: pointer;
+  }
+
+ 
+
+
+  .griditem1 {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+
+  .griditem2 {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+
+  .griditem3 {
+    grid-row: span 2;
+  }
+
+  .griditem4 {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+
+  #myModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    z-index: 1; 
+    overflow: scroll;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  
+  #modal-image {
+    width: 90vw;
+    height: 90vh;
+    object-fit: contain;
+  }
+
+  #close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 3rem;
+    color: white;
+  }
+
+  #close:hover {
+    cursor: pointer;
+  }
+
+ #contact-left {
+  width: 40%;
+  margin-right: 10px;
+ }
+
+ #contact-left h2 {
+  font-size: 3rem;
+ }
+
+ #contact-left p {
+  font-size: 1.75rem;
+ }
+
+  #contact {
+    margin: 50px 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #gridbox-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    row-gap: 50px;
+  }
+
+  #input3 {
+    grid-column: span 2;
+  }
+
+  #input4 {
+    grid-column: span 2;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-family: serif;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+
+  input[type="email"] {
+    width: 100%;
+    font-family: serif;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+
+  #message {
+    width: 100%;
+    height: 200px;
+    font-family: serif;
+    font-size: 1.2rem;
+  }
+
+  #contact-form {
+   border: 20px, double, #7FA1C3;
+   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+   
+   padding: 20px;
+  }
+
+  .drpbtn {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#F5EDED;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70vw; /* Could be more or less, depending on screen size */
+    height: 95vh;
+    overflow: auto;
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    font-family: "Arsenal SC", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+ #modalImage {
+  text-align: center;
+ }
+
+ #spotify-button {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: solid black 1px;
+  border-radius: 30px;
+  padding: 10px;
+ }
+
+ #spotify-button:hover {
+  background-color: #1F316F;
+  color: white;
+  cursor: pointer;
+ }
+
+ #apple-button:hover {
+  background-color: #1F316F;
+  color: white;
+  cursor: pointer;
+ }
+
+ #spotify-button span {
+  font-size: 1.5rem;
+  padding-right: 10px;
+ }
+
+ #apple-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 30px;
+  padding: 10px;
+ }
+
+ #apple-button span {
+  font-size: 1.5rem;
+  padding-right: 10px;
+ }
+
+ #music-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ }
+
+ #music-buttons a {
+  text-decoration: none;
+ }
+
+
+ #modalImage img {
+ height: 60vh;
+ }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #submit {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color:#6482AD;
+    color:#F5EDED;
+    margin-top: 20px;
+  }
+
+  #submit:hover {
+    background-color: #1F316F;
+    cursor: pointer;
+  }
+ 
+
+@media (max-width: 1017px) {
+.release-left {
+    padding-right: 10px;
+}
+
+ .release-left p {
+    font-size: 1rem;
+ }
+
+ .release-left li {
+    font-size: 1rem;
+ }
+
+ .release-left h2 {
+    font-size: 1.75rem;
+ }
+
+ .video-container {
+  width: 500px;
+  position: relative;
+
+}
+
+}
+
+@media (max-width: 860px) {
+#contact {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 30px;
+}
+
+#contact-left {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#players {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#spotify-embed {
+  margin-bottom: 20px;
+}
+
+#music-title {
+  width: 90%;
+}
+
+#players iframe {
+  width: 90%;
+}
+
+  .biography {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biography div {
+    width: 400px;
+    margin: 0px;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  .biography img {
+    margin-top: 20px;
+  }
+
+  .in-view2 {
+    animation: slideLeft;
+    animation-duration: 3s;
+  }
+
+
+  @keyframes slideLeft {
+    from {margin-left: -400px}
+    to {margin-right: 0px}
+  }
+  
+
+  .in-view {
+    animation: slideRight;
+    animation-duration: 3s;
+    animation-duration: 3s;
+  }
+
+  @keyframes slideRight {
+    from {margin-left: 400px}
+    to {margin-left: 0px}
+  }
+
+  .slideshow-container {
+    width: 100vw;
+  }
+
+  .image img {
+    width: 90vw;
+  }
+   
+
+   navbar div {
+    flex-direction: column;
+   }
+
+    .menu {
+        position: relative;
+        transform: none;
+        left:0%;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .youtube {
+        width: 100%;
+    }
+
+    .video-container {
+      width: 80vw;
+      position: relative;
+    }
+
+    #latest-release {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .release-left {
+        padding-top: 30px;
+        align-self: flex-start;
+        margin: 0px 50px;
+    }
+
+    .release-left p {
+        font-size: 1.5rem;
+        padding-bottom: 30px;
+        width: 100%;
+     }
+    
+     .release-left li {
+        font-size: 1.25rem;
+     }
+    
+     .release-left h2 {
+        font-size: 3rem;
+        padding-bottom: 30px;
+     }
+}
+
+@media (max-width: 666px) {
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  #spotify-button {
+    padding: 5px;
+  }
+
+  #apple-button {
+    padding: 5px;
+  }
+
+  #music-buttons span {
+    font-size: 1rem;
+  }
+
+  #modalImage img {
+    width: 50vw;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 570px) {
+  .numbertext {
+    display: none;
+  }
+
+  #article-gallery {
+    display:  block;
+  }
+
+  .image img {
+    width: 95vw;
+  }
+
+  .prev, .next {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: #1F316F;
+  }
+
+  .photo-gallery {
+    margin-top: 5px;
+  }
+
+  .biography div {
+    width: 90vw;
+    margin: 0px;
+    height: 100%;
+  }
+
+  .biography img {
+    width: 90vw;
+  }
+
+  .in-view {
+    animation: none;
+  }
+
+  .in-view2 {
+    animation: none;
+  }
+
+  .menu {
+    display: none;
+  } 
+
+  #mobile-flex {
+    display: flex;
+    flex-direction: row;
+  }
+
+    h1 {
+    margin: 10px;
+   }
+
+    .dropbtn {
+        margin: 0px;
+        background-color: #F5EDED;
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropbtn:hover {
+        background-color: #E2DAD6;
+      }
+      
+    
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 0;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd;}
+      
+      .show {display:block;}
+
+      .release-left p {
+        font-size: 1.25rem;
+     }
+    
+     .release-left li {
+        font-size: 1.2rem;
+     }
+    
+     .release-left h2 {
+        font-size: 2.5rem;
+     }
+
+     .release-left {
+      margin: 0px 10px;
+     }
+
+     #latest-release {
+      margin-top: 40px;
+     }
+
+     .video-container {
+      width: 90vw;
+      position: relative;
+    }
+  
+#contact {
+  margin: 50px 10px;
+}
+
+#contact-form {
+  border: 10px, double, #7FA1C3;
+}
+
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+}
+
