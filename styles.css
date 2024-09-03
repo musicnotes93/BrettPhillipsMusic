@@ -93,11 +93,11 @@ svg {
 }
 
 .release-left a {
-   color:#6482AD;
+  color:#1F316F;
 }
 
-.release-left a:visited {
-    color:#1F316F;
+.release-left a:hover {
+    color:#6482AD;
 }
 
 .social-list {
