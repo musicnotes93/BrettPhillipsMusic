@@ -901,6 +901,7 @@ footer p {
    }
 
     .dropbtn {
+       padding: 5px;
         margin: 0px;
         background-color: #F5EDED;
         font-size: 15px;
