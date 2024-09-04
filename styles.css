@@ -187,9 +187,12 @@ footer p {
 
   .mySlides {
     display: none;
-   
   }
   
+  .mySlides1 {
+    display: none;
+  }
+
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -197,9 +200,9 @@ footer p {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: #1F316F;
+    color:#6482AD;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -237,7 +240,7 @@ footer p {
   
  
   .prev:hover, .next:hover {
-    background-color: #E2DAD6;
+    background-color:#1F316F;
   }
   
   .numbertext {
@@ -246,6 +249,17 @@ footer p {
     padding: 8px 12px;
     position: absolute;
     bottom: 0;
+  }
+
+  .numbertext1 {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
   }
   
 
@@ -287,7 +301,7 @@ footer p {
 
 
   .biography div {
-    box-shadow: 11px 9px 17px 0px rgba(82,82,82,1);
+    box-shadow: 0px 0px 41px 5px rgba(82,82,82,1);
     background-color: #E2DAD6;
     padding: 20px;
     display: flex;
@@ -299,7 +313,7 @@ footer p {
   }
 
   .biography img {
-   width: 400px;
+   width: 383px;
   }
 
   .in-view {
@@ -313,7 +327,7 @@ footer p {
   }
 
   #music-players iframe {
-    width: 45%;
+    width: 40%;
     height: 500px;
     border-style: none;
    
@@ -321,7 +335,8 @@ footer p {
 
   #players {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
   }
 
   #music-players {
@@ -330,7 +345,7 @@ footer p {
   }
 
   #music-title {
-    width: 94%;
+    width: 81%;
     align-self: center;
     font-size: 2rem;
     letter-spacing: 3px;
@@ -369,6 +384,7 @@ footer p {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    position: relative;
   }
   .image:hover {
     cursor: pointer;
@@ -486,14 +502,16 @@ footer p {
     height: 200px;
     font-family: serif;
     font-size: 1.2rem;
+    padding: 5px;
   }
 
-  #contact-form {
-   border: 20px, double, #7FA1C3;
-   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
-   
-   padding: 20px;
+  #form {
+    border: 20px, double, #7FA1C3;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
   }
+
+
 
   .drpbtn {
     font-size: 1.5rem;
@@ -628,6 +646,14 @@ footer p {
   #submit:hover {
     background-color: #1F316F;
     cursor: pointer;
+  }
+
+  #result span {
+    font-size: 1.5rem;
+  }
+
+  #result {
+    margin-top: 20px;
   }
  
 
@@ -792,6 +818,11 @@ footer p {
     font-size: 1.5rem;
   }
 
+  .modal-content {
+    height: 80vh;
+    width: 90vw;
+  }
+
   #spotify-button {
     padding: 5px;
   }
@@ -938,7 +969,7 @@ footer p {
   margin: 50px 10px;
 }
 
-#contact-form {
+#form {
   border: 10px, double, #7FA1C3;
 }
 
