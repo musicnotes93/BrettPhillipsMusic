@@ -277,6 +277,8 @@ footer p {
   .active, .dot:hover {
     background-color: #717171;
   }
+
+
   
   
   .fade {
@@ -974,6 +976,18 @@ footer p {
 #form {
   border: 10px, double, #7FA1C3;
 }
+
+}
+
+@media (max-width: 445px) {
+  .modal-content {
+    height: 70vh;
+  }
+
+  #modalImage img {
+    width: 70vw;
+  }
+
 
 }
 

@@ -53,7 +53,7 @@ function myFunction() {
     }
   }
 
-    function currentSlide(n) {
+    function currentSlide1(n) {
       let active = document.getElementsByClassName('active')[0];
       if(active!=undefined)
       active.classList.toggle('active');
@@ -65,7 +65,7 @@ function myFunction() {
 
   $(".next").on("click", function() {
       n=i;
-      currentSlide(n) + plusSlides();
+      currentSlide1(n) + plusSlides();
       $("#img" + i).show();
       $("#img" + (i - 1)).hide();
       $("#dot" + i).addClass("active");
