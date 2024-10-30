@@ -268,6 +268,13 @@ const form = document.getElementById('form');
 const result = document.getElementById('result');
 
 form.addEventListener('submit', function(e) {
+  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field");
+        return;
+    }
   e.preventDefault();
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
@@ -288,12 +295,12 @@ form.addEventListener('submit', function(e) {
                 result.innerHTML = "<span>Thank you for contacting me!</span>";
             } else {
                 console.log(response);
-                result.innerHTML = "<span>Thank you for contacting me!</span>";
+                result.innerHTML = "<span>There was a problem with your submission.<span>";
             }
         })
         .catch(error => {
             console.log(error);
-            result.innerHTML = "Something went wrong!";
+            result.innerHTML = "<span>Something went wrong!<span>";
         })
         .then(function() {
             form.reset();
