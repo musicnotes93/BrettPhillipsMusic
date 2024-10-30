@@ -168,100 +168,19 @@ document.addEventListener("DOMContentLoaded", () => {
 }); 
 
 
-
-
 $("#myModal").hide();
 
-$(".image1").click(function() {
-  $("#modal-image").attr("src", "assets/brett1.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
+$(".gallery-img").click(function() {
+  const imageNumber = $(this).data("image");
+  $("#modal-image").attr("src", `assets/brett${imageNumber}.jpeg`);
+  $("#myModal").show();
 });
 
-$(".image2").click(function() {
-  $("#modal-image").attr("src", "assets/brett2.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
+$("#myModal").click(function() {
+  $(this).hide();
 });
 
-$(".image3").click(function() {
-  $("#modal-image").attr("src", "assets/brett3.jpg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
 
-$(".image4").click(function() {
-  $("#modal-image").attr("src", "assets/brett4.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image5").click(function() {
-  $("#modal-image").attr("src", "assets/brett5.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image6").click(function() {
-  $("#modal-image").attr("src", "assets/brett6.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image7").click(function() {
-  $("#modal-image").attr("src", "assets/brett7.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image8").click(function() {
-  $("#modal-image").attr("src", "assets/brett8.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image9").click(function() {
-  $("#modal-image").attr("src", "assets/brett9.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image10").click(function() {
-  $("#modal-image").attr("src", "assets/brett10.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image11").click(function() {
-  $("#modal-image").attr("src", "assets/brett11.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image12").click(function() {
-  $("#modal-image").attr("src", "assets/brett12.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
-
-$(".image13").click(function() {
-  $("#modal-image").attr("src", "assets/brett13.jpeg");
-  $("#myModal").show().click(function() {
-    $("#myModal").hide();
-  });
-});
 
 
 const form = document.getElementById('form');
