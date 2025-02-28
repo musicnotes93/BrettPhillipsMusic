@@ -61,9 +61,18 @@ navbar div {
     border-radius: 5px;
 }
 
+.menu-active {
+  background-color:#aaa;
+}
+
 .menu-item:hover {
     background-color: #E2DAD6;
     cursor: pointer;
+}
+
+.menu-item:active {
+  background-color:#aaa;
+  cursor: pointer;
 }
 
 svg {
@@ -82,8 +91,7 @@ svg {
     display: flex;
     justify-content: center;
     margin-top: 100px;
-    padding: 0px 20px 0px 20px;
-    
+    padding: 0px 20px 0px 20px; 
 }
 
 .release-left {
