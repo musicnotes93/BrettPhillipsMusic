@@ -132,11 +132,6 @@ svg {
     font-size: 1.25rem;
 }
 
-.youtube {
-  aspect-ratio: 16/9;
-  width: 100%;
-}
-
 #instagram {
     display: flex;
     justify-content: center;
@@ -175,8 +170,13 @@ footer p {
 }
 
 .video-container {
-  width: 40vw;
-  position: relative;
+  width: min(90vw, 800px);
+}
+
+.youtube {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 .slideshow-container {
