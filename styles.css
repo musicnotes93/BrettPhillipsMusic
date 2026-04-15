@@ -170,13 +170,13 @@ footer p {
 }
 
 .video-container {
-  width: min(90vw, 800px);
+  width: 40vw;
+  position: relative;
 }
 
 .youtube {
+  aspect-ratio: 16/9;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
 }
 
 .slideshow-container {
