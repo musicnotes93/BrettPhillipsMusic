@@ -29,108 +29,89 @@ function myFunction() {
   }
 
 
-  $("#img1").show();
-  var i = 1;
-  function plusSlides() {
-    if (i < 13) {
-      i++;
-    } else {
-      i=1;
-      $("#img13").hide();
-      $("#img1").show();
-      $("#dot13").removeClass("active");
-    }
-  }
+ // --- VIDEO GALLERY LOGIC ---
+$("#vid1").show();
+var videoIdx = 1; // Renamed to avoid confusion with your image slider 'i'
 
-  function prevSlides() {
-    if (i <= 13 && i > 1) {
-      i--;
-    } else {
-      i = 13;
-      $("#img1").hide();
-      $("#img13").show();
-      $("#dot1").removeClass("active");
-    }
-  }
-
-    function currentSlide1(n) {
-      let active = document.getElementsByClassName('active')[0];
-      if(active!=undefined)
-      active.classList.toggle('active');
-     $("#dot" + n).addClass("active");
-     $(".mySlides").hide();
-     $("#img" + n).show();
-     
-    }
-
-  $(".next").on("click", function() {
-      n=i;
-      currentSlide1(n) + plusSlides();
-      $("#img" + i).show();
-      $("#img" + (i - 1)).hide();
-      $("#dot" + i).addClass("active");
-      $("#dot" + (i-1)).removeClass("active");
+// Function to handle the High-Res Thumbnail Clicks
+function initVideoPlaceholders() {
+  $(".video-placeholder").off("click").on("click", function() {
+    const videoId = $(this).data("video-id");
+    $(this).html(`
+      <iframe class="youtube-inserted" 
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>`);
   });
+}
 
-  $(".prev").on("click", function() {
-    prevSlides();
-    $("#img" + i).show();
-    $("#img" + (i+1)).hide();
-    $("#dot" + i).addClass("active");
-    $("#dot" + (i+1)).removeClass("active");
+// Function to reset videos (stop audio) when changing slides
+function resetVideos() {
+  $(".video-placeholder").each(function() {
+    const vId = $(this).data("video-id");
+    $(this).html(`
+      <img src="https://img.youtube.com/vi/${vId}/maxresdefault.jpg" alt="Thumbnail">
+      <div class="play-button-overlay">▶</div>
+    `);
   });
+  initVideoPlaceholders(); // Re-bind the click event to the new HTML
+}
 
-
-
-  $("#vid1").show();
-  var i = 1;
-  function plusSlides1() {
-    if (i < 5) {
-      i++;
-    } else {
-      i=1;
-      $("#vid5").hide();
-      $("#vid1").show();
-      $("#dot_5").removeClass("active");
-    }
+function plusSlides1() {
+  resetVideos(); // Stop any playing video
+  if (videoIdx < 5) {
+    videoIdx++;
+  } else {
+    videoIdx = 1;
+    $("#vid5").hide();
+    $("#vid1").show();
+    $("#dot_5").removeClass("active");
   }
+}
 
-  function prevSlides2() {
-    if (i <= 5 && i > 1) {
-      i--;
-    } else {
-      i = 5;
-      $("#vid1").hide();
-      $("#vid5").show();
-      $("#dot_1").removeClass("active");
-    }
+function prevSlides2() {
+  resetVideos(); // Stop any playing video
+  if (videoIdx <= 5 && videoIdx > 1) {
+    videoIdx--;
+  } else {
+    videoIdx = 5;
+    $("#vid1").hide();
+    $("#vid5").show();
+    $("#dot_1").removeClass("active");
   }
+}
 
-  function currentSlide(n) {
-    let active = document.getElementsByClassName('active')[0];
-    if(active!=undefined)
-    active.classList.toggle('active');
-   $("#dot_" + n).addClass("active");
-   $(".mySlides1").hide();
-   $("#vid" + n).show();
-  }
+function currentSlide(n) {
+  resetVideos();
+  videoIdx = n; // Update our counter
+  $(".dot").removeClass("active");
+  $("#dot_" + n).addClass("active");
+  $(".mySlides1").hide();
+  $("#vid" + n).show();
+}
 
-  $(".next-vid").on("click", function() {
-      plusSlides1();
-      $("#vid" + i).show();
-      $("#vid" + (i - 1)).hide();
-      $("#dot_" + i).addClass("active");
-      $("#dot_" + (i-1)).removeClass("active");
-  });
+$(".next-vid").on("click", function() {
+  plusSlides1();
+  $("#vid" + videoIdx).show();
+  $("#vid" + (videoIdx === 1 ? 5 : videoIdx - 1)).hide();
+  $("#dot_" + videoIdx).addClass("active");
+  $("#dot_" + (videoIdx === 1 ? 5 : videoIdx - 1)).removeClass("active");
+});
 
-  $(".prev-vid").on("click", function() {
-    prevSlides2();
-    $("#vid" + i).show();
-    $("#vid" + (i+1)).hide();
-    $("#dot_" + i).addClass("active");
-    $("#dot_" + (i+1)).removeClass("active");
-  });
+$(".prev-vid").on("click", function() {
+  prevSlides2();
+  $("#vid" + videoIdx).show();
+  $("#vid" + (videoIdx === 5 ? 1 : videoIdx + 1)).hide();
+  $("#dot_" + videoIdx).addClass("active");
+  $("#dot_" + (videoIdx === 5 ? 1 : videoIdx + 1)).removeClass("active");
+});
 
+// Initialize on load
+$(document).ready(function() {
+  initVideoPlaceholders();
+});
 
   
 document.addEventListener("DOMContentLoaded", () => {
