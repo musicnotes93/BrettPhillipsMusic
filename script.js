@@ -14,19 +14,18 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
- 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+window.onclick = function(event) {
+  // Check if the click was OUTSIDE the dropdown button AND OUTSIDE the links
+  if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
   }
+}
 
 $("#img1").show();
 var imgIdx = 1; // Distinct variable for images
@@ -88,7 +87,7 @@ function resetVideos() {
         if (vId) {
             $(this).html(`
                 <img src="https://img.youtube.com/vi/${vId}/maxresdefault.jpg" alt="Thumbnail">
-                <div class="play-button-overlay">▶</div>
+               <div class="play-button-overlay">▶</div>
             `);
         }
     });
@@ -98,14 +97,21 @@ function resetVideos() {
 function initVideoPlaceholders() {
     $(".video-placeholder").off("click").on("click", function() {
         const videoId = $(this).data("video-id");
-        $(this).html(`
-            <iframe class="youtube-inserted" 
-                src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
-                frameborder="0" allowfullscreen>
-            </iframe>`);
+        
+        // Create the iframe element specifically
+        const iframe = document.createElement("iframe");
+        
+        iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&autohide=1&border=0&egm=0&showsearch=0`);
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("class", "youtube-inserted");
+        // Modern browsers require this specific string for autoplay to work on click
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.setAttribute("allowfullscreen", "true");
+
+        // Clear and append
+        $(this).empty().append(iframe);
     });
 }
-
 function plusSlides1() {
     resetVideos();
     if (videoIdx < 5) {

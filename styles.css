@@ -730,6 +730,105 @@ max-width: 1500px;
     margin-top: 20px;
   }
 
+  #shows-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+#shows-header h2 {
+    font-family: "Arsenal SC", sans-serif;
+    font-size: 3rem;
+    color: #1F316F;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.shows-list {
+    background-color: #F5EDED; /* Matches your body color */
+}
+
+.show-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 15px;
+    border-bottom: 1px solid #7FA1C3; /* Light blue accent */
+    transition: background 0.3s;
+}
+
+.show-row:hover {
+    background-color: #E2DAD6;
+}
+
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6482AD;
+    color: #F5EDED;
+    min-width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.date-box .month {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.date-box .day {
+    font-family: "Arsenal SC", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.show-info {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+.show-info h3 {
+    font-family: "Arsenal SC", sans-serif;
+    font-size: 1.6rem;
+    color: #1F316F;
+    
+}
+
+.show-info h4 {
+    font-family: "Arsenal SC", sans-serif;
+        color: #1F316F;
+        font-size: 1.3rem;
+}
+
+.show-info p {
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.show-btn {
+    text-decoration: none;
+    background-color: #1F316F;
+    color: #F5EDED;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-family: "Arsenal SC", sans-serif;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.show-btn:hover {
+    background-color: #6482AD;
+}
+
+
 
 @media (max-width: 1017px) {
 .release-left {
@@ -753,6 +852,24 @@ max-width: 1500px;
   position: relative;
 
 }
+
+}
+@media (max-width: 990px) {
+   navbar div {
+    flex-direction: column;
+   }
+
+    .menu {
+        position: relative;
+        transform: none;
+        left:0%;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+    }
+
 
 }
 
@@ -911,6 +1028,18 @@ max-width: 1500px;
   }
 }
 
+/* Responsive Show List */
+@media (max-width: 600px) {
+    .show-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .show-info {
+        margin-left: 0;
+    }
+}
 
 @media (max-width: 570px) {
   .numbertext {
